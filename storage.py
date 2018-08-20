@@ -15,11 +15,11 @@ from gpiozero.pins.pigpio import PiGPIOFactory
 # =======================================================
 # Set Following Variables
 # AWS IoT Endpoint
-MQTT_HOST = "a3uerm2zw7tee9.iot.us-east-1.amazonaws.com"
+MQTT_HOST = "a3uegm2zc72ww9.iot.us-east-1.amazonaws.com" #Update to your Iot Endpoint
 # CA Root Certificate File Path
 CA_ROOT_CERT_FILE = "cert/VeriSign-Class 3-Public-Primary-Certification-Authority-G5 (1).pem"
 # AWS IoT Thing Name
-THING_NAME = "alexa123thing"
+THING_NAME = "alexa123thing" #Change to your IOT Thing Name
 # AWS IoT Thing Certificate File Path
 THING_CERT_FILE = "cert/a5b8840f7f-certificate.pem.crt"
 # AWS IoT Thing Private Key File Path
@@ -50,7 +50,8 @@ mqttc = mqtt.Client("client2")
 #LED Control
 def ledcontrol(bins):
     print('Turning on LED' + str(bins))
-    factory = PiGPIOFactory('192.168.0.194')#Ip adress of Pi zero
+#!!!!!Change IP address to your PI Zero!!!!!!
+    factory = PiGPIOFactory('192.168.1.100')#IP adress of Pi zero
     #led = LED(33, pin_factory=factory) # remote pin
     #led.off
     #led = LED(35, pin_factory=factory) # remote pin
@@ -196,7 +197,7 @@ def updatecsv(myQuestion):
 			splitquestion = myQuestion.split()
 			binnumber = nextword("container", splitquestion)
 			print(binnumber)
-#need to add int to word for alexa command
+
 			querypos = myQuestion.rfind(query + ' ' + binnumber) + len(query) + 1 + len(binnumber) + 1
 			removethis= myQuestion[querypos:]
 			try:
