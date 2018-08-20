@@ -1,5 +1,6 @@
 # alexapistorage
-Alexa Storage Shelf IOT using Raspberry Pi
+Alexa Storage Shelf IOT using Raspberry Pi.
+
 Hello this project has a step by step guide on what this code does and how to get it running for your own purposes.
 Check it out on You Tube! 
 https://youtu.be/jm_Ez_tbq58
