@@ -34,7 +34,7 @@ def convert(dictionary):
     if not isinstance(dictionary, dict):
         return dictionary
     return dict((str(k), convert(v)) 
-        for k, v in dictionary.items())
+        for k, v in dictionary.items()) 
 
 
 # --------------- response handlers -----------------
