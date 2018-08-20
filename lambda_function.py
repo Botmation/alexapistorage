@@ -280,4 +280,4 @@ def response(attributes, speech_response):
         'version': '1.0',
         'sessionAttributes': attributes,
         'response': speech_response
-    }
+}
